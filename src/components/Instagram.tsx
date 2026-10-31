@@ -1,18 +1,21 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { Instagram as InstagramIcon } from 'lucide-react';
-import { ScallopButton } from './ScallopButton';
-import { CroissantDoodle, BreadLoafDoodle, TakeawayBagDoodle } from './Doodles';
-import { CAFE_INFO } from '../data/bakeryData';
+import React from "react";
+import { motion } from "motion/react";
+import { Instagram as InstagramIcon } from "lucide-react";
+import { ScallopButton } from "./ScallopButton";
+import { CroissantDoodle, BreadLoafDoodle, TakeawayBagDoodle } from "./Doodles";
+import { CAFE_INFO } from "../data/bakeryData";
 
 export function Instagram() {
   const handleInstagramClick = () => {
-    window.open(`https://instagram.com/${CAFE_INFO.instagram.replace('@', '')}`, '_blank', 'noopener,noreferrer');
+    window.open(
+      `https://instagram.com/${CAFE_INFO.instagram.replace("@", "")}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
   };
 
   return (
     <section className="bg-[#FFF8E7] py-20 sm:py-28 relative overflow-hidden">
-      
       {/* Faint Background Line-Art Bakery Doodles */}
       <div className="absolute inset-0 pointer-events-none select-none opacity-10 overflow-hidden">
         <div className="absolute -top-10 -left-10 transform -rotate-12">
@@ -27,7 +30,6 @@ export function Instagram() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -40,13 +42,13 @@ export function Instagram() {
             Follow the crumbs.
           </h2>
           <p className="text-base sm:text-lg text-[#0B3FBF]/80 font-medium mt-2">
-            Daily oven drops, flour experiments, and slow mornings on {CAFE_INFO.instagram}
+            Daily oven drops, flour experiments, and slow mornings on{" "}
+            {CAFE_INFO.instagram}
           </p>
         </motion.div>
 
         {/* Tilted Photo Collage */}
         <div className="relative max-w-2xl sm:max-w-3xl mx-auto my-8 sm:my-12 h-80 sm:h-96 flex items-center justify-center">
-          
           {/* Left Tilted Photo (Morning bun) */}
           <motion.div
             initial={{ opacity: 0, x: -40, rotate: -15 }}
@@ -57,7 +59,7 @@ export function Instagram() {
           >
             <div className="aspect-square rounded-xl overflow-hidden bg-[#FFF8E7]">
               <img
-                src="/src/assets/images/pastry_cinnamon_bun_1793434739515.jpg"
+                src="/image/pastry_cinnamon_bun_1793434739515.jpg"
                 alt="Cardamom morning bun"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -79,7 +81,7 @@ export function Instagram() {
           >
             <div className="aspect-square rounded-xl overflow-hidden bg-[#FFF8E7]">
               <img
-                src="/src/assets/images/pastry_pain_chocolat_1793434739673.jpg"
+                src="/image/pastry_pain_chocolat_1793434739673.jpg"
                 alt="Flaky pain au chocolat"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -101,7 +103,7 @@ export function Instagram() {
           >
             <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-[#FFF8E7]">
               <img
-                src="/src/assets/images/pastry_table_spread_1793434739663.jpg"
+                src="/image/pastry_table_spread_1793434739663.jpg"
                 alt="Table spread with coffee and warm bun"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -113,7 +115,6 @@ export function Instagram() {
               <span>☕🥐</span>
             </div>
           </motion.div>
-
         </div>
 
         {/* Action Button */}
@@ -133,7 +134,6 @@ export function Instagram() {
             Follow along on Instagram
           </ScallopButton>
         </motion.div>
-
       </div>
     </section>
   );
